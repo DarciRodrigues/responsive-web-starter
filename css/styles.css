@@ -8,56 +8,196 @@
   --dark-white: #f2f9fe;
   --poppins: "Poppins", sans-serif;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: var(--poppins);
+  list-style: none;
+  font-size: 1.125rem;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   width: 100%;
   height: 5em;
   padding: 10px 20px 10px 20px;
 }
-nav > ul {
-  display: flex;
 
+nav>ul {
+  display: flex;
+  cursor: pointer;
   align-items: center;
   flex-direction: row;
   list-style: none;
 }
-nav > ul > li {
+
+nav>ul>li {
   padding: 2em;
   text-transform: capitalize;
   font-size: 0.875rem;
   font-weight: 400;
 }
 
+nav>ul>li:hover {
+  color: #1c84ff;
+}
+
 main {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 80%;
+  height: 75vh;
   align-items: center;
   justify-content: center;
 }
+
 section {
   height: 100%;
   width: 50%;
 }
+
 .content {
   height: 100%;
   width: 50%;
-  
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
+  justify-content: space-around;
+  padding-left: 30px;
 }
-section > img {
+
+.content h2,
+.content p {
+  font-size: 0.875rem;
+}
+
+.content h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  width: 80%;
+}
+
+.content h1 {
+  font-size: 3.75rem;
+  width: 75%;
+}
+
+.content p {
+  width: 75%;
+  font-weight: 700;
+  color: var(--cinza);
+}
+
+.cta>a {
+  font-size: 0.875rem;
+  margin-left: 1.5rem;
+  color: var(--blue);
+}
+
+.cta>a:hover {
+  color: #1c84ff;
+}
+
+.content .button-22 {
+  text-transform: uppercase;
+  align-items: center;
+  background-color: var(--blue);
+  border-radius: 14px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  color: #fff;
+  cursor: pointer;
+  width: 9em;
+  height: 3em;
+  padding: 10px 21px;
+  text-align: center;
+  transition: color 0.13s ease-in-out, background 0.13s ease-in-out,
+    opacity 0.13s ease-in-out, box-shadow 0.13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-22:hover {
+  background-color: #1c84ff;
+}
+
+.content ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.content ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--cinza);
+  font-size: 0.875rem;
+}
+
+svg {
+  margin-right: 10px;
+}
+
+section>img {
   width: 100%;
 }
+
+/* From Uiverse.io by alexruix */
+/* The switch - the box around the slider */
+.switch {
+  background-color: var(--cinza-escuro);
+  font-size: 17px;
+  position: relative;
+  width: 3.5em;
+  height: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2rem;
+  z-index: 1;
+  padding: 4px;
+}
+
+/* Hide default HTML checkbox */
+input {
+
+    display: none;
+   
+}
+
+.switch::before {}
+
+.slider {
+  content: "";
+  background-color: var(--dark-white);
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  transform: translate(-3px, -5%);
+  z-index: -1;
+
+}
+
+
+.switch img {
+  width: .9em;
+}
+
+.slider:before {}
+
+.slider.black {
+
+  
+  
+left: 0;
+
+
+}
+
+input:checked+.slider:before {}
